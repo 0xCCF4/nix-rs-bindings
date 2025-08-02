@@ -1,0 +1,19 @@
+[package]
+name = "nix-utilc-sys"
+version = "0.1.0"
+edition = "2024"
+description = "Rust bindings for the NIX's libnixutilc library"
+repository = "https://github.com/0xCCF4/nix-rs-bindings"
+documentation = "https://github.com/NixOS/nix/tree/master/src/libutil-c"
+license = "MIT"
+keywords = ["nix", "nixos", "bindings", "nix-api", "library"]
+categories = ["external-ffi-bindings"]
+links = "nixutilc"
+
+[build-dependencies]
+
+nix-sys-common-build = { path = "../common-build" }
+
+[features]
+static = []
+shared = []

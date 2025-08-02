@@ -1,0 +1,3 @@
+[workspace]
+resolver = "3"
+members = [ "nix-exprc-sys","nix-flakec-sys", "nix-mainc-sys",  "nix-storec-sys", "common-build", "nix-utilc-sys"]

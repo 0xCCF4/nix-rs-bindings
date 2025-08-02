@@ -1,0 +1,21 @@
+[package]
+name = "nix-exprc-sys"
+version = "0.1.0"
+edition = "2024"
+description = "Rust bindings for the NIX's libnixexprc library"
+repository = "https://github.com/0xCCF4/nix-rs-bindings"
+documentation = "https://github.com/NixOS/nix/tree/master/src/libexpr-c"
+license = "MIT"
+keywords = ["nix", "nixos", "bindings", "nix-api", "library"]
+categories = ["external-ffi-bindings"]
+links = "nixexprc"
+
+[build-dependencies]
+nix-sys-common-build = { path = "../common-build" }
+
+[dev-dependencies]
+libc = "0.2.174"
+
+[features]
+static = []
+shared = []

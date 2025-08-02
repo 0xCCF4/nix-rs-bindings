@@ -1,0 +1,11 @@
+[package]
+name = "nix-sys-common-build"
+version = "0.1.0"
+edition = "2024"
+description = "Helper functions for Rust bindings for the different NIX libraries"
+repository = "https://github.com/0xCCF4/nix-rs-bindings"
+license = "MIT"
+
+[dependencies]
+pkg-config = "0.3.32"
+bindgen = "0.72.0"
