@@ -18,33 +18,34 @@
             inherit system overlays;
           };
           dependencies = {
-          LIBCLANG_PATH = "${pkgs.llvmPackages_16.libclang.lib}/lib";
-                          nativeBuildInputs = with pkgs; [
-                            pkg-config
-                          ];
-                          buildInputs = with pkgs; [
-                            nix
-                            boost
-                            brotli
-                            libarchive
-                            libblake3
-                            libcpuid
-                            libsodium
-                            nlohmann_json
-                            openssl
-                            libseccomp
-                            sqlite
-                            curl
-                            libgit2
-                            pcre2
-                            libunistring
-                            aws-crt-cpp
-                            llhttp
-                            bzip2
-                            lowdown
-                            editline
-                            rust-bin.stable.latest.default
-                          ];
+            LIBCLANG_PATH = "${pkgs.llvmPackages_16.libclang.lib}/lib";
+            LD_LIBRARY_PATH = "${pkgs.nix}/lib";
+            nativeBuildInputs = with pkgs; [
+              pkg-config
+            ];
+            buildInputs = with pkgs; [
+              nix
+              boost
+              brotli
+              libarchive
+              libblake3
+              libcpuid
+              libsodium
+              nlohmann_json
+              openssl
+              libseccomp
+              sqlite
+              curl
+              libgit2
+              pcre2
+              libunistring
+              aws-crt-cpp
+              llhttp
+              bzip2
+              lowdown
+              editline
+              rust-bin.stable.latest.default
+            ];
           };
           customBuildRustCrateForPkgs = pkgs: pkgs.buildRustCrate.override {
             stdenv = pkgs.clang16Stdenv;
@@ -64,10 +65,10 @@
         with pkgs;
         {
           devShells.default = pkgs.mkShell.override
-                              {
-                                stdenv = pkgs.clang16Stdenv;
-                              }
-                              dependencies;
+            {
+              stdenv = pkgs.clang16Stdenv;
+            }
+            dependencies;
 
           packages.prebuilt = pkgs.symlinkJoin {
             name = "all-workspace-members";
