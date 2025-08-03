@@ -1,2 +1,0 @@
-window.ALL_CRATES = ["bindgen","bitflags","cexpr","cfg_if","clang_sys","either","glob","itertools","libc","libloading","log","memchr","minimal_lexical","nix_exprc_sys","nix_flakec_sys","nix_mainc_sys","nix_storec_sys","nix_sys_common_build","nix_utilc_sys","nom","pkg_config","prettyplease","proc_macro2","quote","regex","regex_automata","regex_syntax","rustc_hash","shlex","syn","unicode_ident"];
-//{"start":21,"fragment_lengths":[9,11,8,9,12,9,7,12,7,13,6,9,18,16,17,16,17,23,16,6,13,15,14,8,8,17,15,13,8,6,16]}

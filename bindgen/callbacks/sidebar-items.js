@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"enum":["DeriveTrait","DiscoveredItem","EnumVariantCustomBehavior","EnumVariantValue","ImplementsTrait","IntKind","ItemKind","MacroParsingBehavior","TokenKind","TypeKind"],"struct":["AttributeInfo","DeriveInfo","DiscoveredItemId","FieldInfo","ItemInfo","Token"],"trait":["ParseCallbacks"]};
