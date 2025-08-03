@@ -44,7 +44,7 @@
               bzip2
               lowdown
               editline
-              rust-bin.stable.latest.default
+              rust-bin.nightly."2025-08-01".default
             ];
           };
           customBuildRustCrateForPkgs = pkgs: pkgs.buildRustCrate.override {
