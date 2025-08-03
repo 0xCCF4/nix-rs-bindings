@@ -1,6 +1,6 @@
+use pkg_config::Library;
 use std::env;
 use std::path::PathBuf;
-use pkg_config::Library;
 
 pub fn configure_library<F: FnOnce(&Library, bindgen::Builder) -> bindgen::Builder>(
     pkg_name: &str,
@@ -57,7 +57,10 @@ pub fn configure_library<F: FnOnce(&Library, bindgen::Builder) -> bindgen::Build
             } else {
                 format!("-D{name}")
             }
-        })).header_contents("stub.h", "");
+        }))
+        .header_contents("stub.h", "")
+        .rustified_enum("ValueType")
+        .rustified_enum("nix_err");
 
     let bindings = configure_bindings(&library, bindings);
 

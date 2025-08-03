@@ -1,5 +1,5 @@
-use std::{env, fs};
 use std::path::PathBuf;
+use std::{env, fs};
 
 fn main() {
     nix_sys_common_build::configure_library(
@@ -24,12 +24,13 @@ fn main() {
                 }
             }
 
-            builder
-                .clang_arg(format!("-I{out_dir}"))
-                .header_contents("lib.h", r#"
+            builder.clang_arg(format!("-I{out_dir}")).header_contents(
+                "lib.h",
+                r#"
                 #include <nix_api_expr.h>
                 #include <nix_api_value.h>
-                "#)
-        }
+                "#,
+            )
+        },
     );
 }

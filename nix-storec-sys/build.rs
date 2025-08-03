@@ -4,8 +4,6 @@ fn main() {
         "NIXSTOREC_STATIC",
         cfg!(feature = "static"),
         cfg!(feature = "shared"),
-        |_, a| {
-            a.header_contents("lib.h", "#include <nix_api_store.h>")
-        }
+        |_, a| a.header_contents("lib.h", "#include <nix_api_store.h>"),
     );
 }
