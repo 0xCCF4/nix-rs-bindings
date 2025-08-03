@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["increment","nix_plugin_entry"]};

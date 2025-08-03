@@ -1,1 +1,0 @@
-searchState.loadedDescShard("increment", 0, "")

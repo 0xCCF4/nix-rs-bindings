@@ -1,1 +1,0 @@
-window.SIDEBAR_ITEMS = {"fn":["main","my_get_string_cb"]};
