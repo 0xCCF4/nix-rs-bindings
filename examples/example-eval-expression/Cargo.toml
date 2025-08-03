@@ -1,0 +1,9 @@
+[package]
+name = "example-eval-expression"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+nix-exprc-sys = { path = "../../nix-exprc-sys", features = ["shared"] }
+libc = "0.2.174"
