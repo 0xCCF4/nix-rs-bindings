@@ -45,6 +45,7 @@
               lowdown
               editline
               rust-bin.nightly."2025-08-01".default
+              release-plz
             ];
           };
           customBuildRustCrateForPkgs = pkgs: pkgs.buildRustCrate.override {
